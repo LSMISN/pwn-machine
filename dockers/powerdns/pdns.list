@@ -1,2 +1,2 @@
-deb [arch=amd64] http://repo.powerdns.com/debian buster-auth-master main
-deb [arch=amd64] http://repo.powerdns.com/debian buster-rec-master main
+deb [arch=amd64 signed-by=/etc/apt/keyrings/pdns.gpg] http://repo.powerdns.com/ubuntu jammy-auth-49 main
+deb [arch=amd64 signed-by=/etc/apt/keyrings/pdns.gpg] http://repo.powerdns.com/ubuntu jammy-rec-49 main

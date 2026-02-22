@@ -1,11 +1,11 @@
-FROM ubuntu@sha256:adf73ca014822ad8237623d388cedf4d5346aa72c270c5acc01431cc93e18e2d
+FROM ubuntu:22.04
 ARG API_KEY
 # Setup powerdns repositories
 RUN apt-get update && apt-get install curl gnupg dnsutils rsyslog -y
 COPY pdns.list /etc/apt/sources.list.d/pdns.list
 COPY pdns /etc/apt/preferences.d/pdns
 
-RUN bash -c 'curl https://repo.powerdns.com/CBC8B383-pub.asc | apt-key add -'
+RUN mkdir -p /etc/apt/keyrings && curl -fsSL https://repo.powerdns.com/FD380FBB-pub.asc | gpg --dearmor -o /etc/apt/keyrings/pdns.gpg
 
 # Instal dependencies
 RUN apt-get update

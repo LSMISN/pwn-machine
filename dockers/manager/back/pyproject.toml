@@ -3,6 +3,7 @@ name = "pwnm-back"
 version = "0.1.0"
 description = "PwnMachine backend"
 authors = ["BitK <bitk@yeswehack.com>", "Maëlys Bras de fer <m.brasdefer@yeswehack.com>"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.9"
